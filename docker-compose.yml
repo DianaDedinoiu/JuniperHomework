@@ -1,0 +1,22 @@
+
+version: "3"
+
+services:
+  
+  server:
+    
+    build: server/
+
+    command: python3 ./multiconn-server.py 127.0.0.1 1234
+
+
+  client:
+    
+    build: client/
+
+    command: python3 ./multiconn-client.py 127.0.0.1 1234 2 
+
+    network_mode: host
+
+    depends_on:
+      - server
