@@ -14,7 +14,7 @@ docker-compose up
 1. sudo netstat -ap | grep:<port_np> # the output will show the process
 2. kill <pid>	
 
-# How to chapture the traffic on an intf(to check the 3-way handshake between the client and the server ):
+# How to capture the traffic on an intf(to check the 3-way handshake(SYN, SYN ACK, ACK) between the client and the server and other flags(PSH, FIN, ACK) ):
 
 sudo tshark -i <interface_name> 'tcp port X' (X is the port given as an argument in Docker-compose.yml)' 
 
