@@ -1,6 +1,7 @@
 # JuniperHomework
 
-This is a simple client-server application with Docker.
+This is a simple client-server application with Docker. It supports multiple connections between the client and the server and it sends string messages
+between them using send(), respectively recv() API calls. 
 
 Please run the below commands in the terminal:
 git clone https://github.com/DianaDedinoiu/JuniperHomework.git
@@ -13,7 +14,7 @@ docker-compose up
 1. sudo netstat -ap | grep:<port_np> # the output will show the process
 2. kill <pid>	
 
-# How to chapture the traffic on an intf:
+# How to chapture the traffic on an intf(to check the 3-way handshake between the client and the server ):
 
 sudo tshark -i <interface_name> 'tcp port X' (X is the port given as an argument in Docker-compose.yml)' 
 
