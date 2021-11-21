@@ -31,7 +31,6 @@ git push origin main
 
 1. https://realpython.com
 2. https://www.freecodecamp.org
-3. 
 
 
 
